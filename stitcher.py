@@ -37,5 +37,6 @@ for manga in mangas:
         pdf_path, "PDF" ,resolution=100.0, save_all=True, append_images=images[1:]
     )
 
-    os.rmdir(f"temp/{manga}")
+    #rmdir seems to be having issues removig manga dir because its not empty. Commenting out for now.
+    #os.rmdir(f"temp/{manga}")
     
