@@ -56,6 +56,8 @@ To use :
 * [ ] Automatically stitch files in temp folder after download.
     [ ] Clean up temp directory on success.
 
+* [ ] Return function to clean folders after completing a task. Previous implementation seems broken for me.
+
 * [ ] Add metadata to PDFs.
 * [ ] Add ability to save stitched files/volumes as CBZ files instead of PDF.
 * [ ] Investigate issue in notes from 1s0n.
