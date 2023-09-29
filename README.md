@@ -8,10 +8,10 @@ This is more of a side project to see whats possible in python as I learn. In th
 
 
 ## Requirements
-To use this, ensure you have chromedriver_autoinstaller, selenium and PyMuPDF installed using pip
+To use this, ensure you have chromedriver_autoinstaller, selenium and PyMuPDF installed using pip.
 
 
-## How to run
+# Using Mangareader Downloader
 
 Run ```main.py``` with the following arguments 
 
@@ -29,23 +29,36 @@ A full and complete example would for example be :
 ```bash
 python3 main.py https://mangareader.to/read/demon-slayer-kimetsu-no-yaiba-colored-edition-56676/en/chapter- 140 205
 ```
-This allows easier automation, which I will hopefully add later.
+4. Find the unstitched images in the _temp_ folder
+
+5. Stitch the images into pdf using stitcher.py by following instructions below. _(NOTE : should be an automatic process, but is currently manual, is a TODO)_
 
 
-# Stitching manga into pdf
-Now that the manga is downloaded (you can check in the "temp" folder), run stitcher.py and wait for it to generate the pdfs from the downloaded manga, which will be in the downloads folder. 
-
-## Batching into volumes
-My goal would eventually be to set things up so that I can choose specific chapters to batch into a volume automatically.
-
-For now, the easiest method to do this is to rename files and move them into a single folder. 
-For example, rename a folder as Vol.1, and then number the images subsequently manually.
-It is not ideal and in a future branch this will be addressed.
+## Stitching manga into pdf
+Now that the manga is downloaded (you can check in the "temp" folder), run ```stitcher.py``` and wait for it to generate the pdfs from the downloaded images. 
+You will find the stitched chapters in the __stitches__ folder.  
 
 
 
+# Batching into volumes
+When stitching files together, it will create an incomplete volumes folder. This folder can be used to stitch the various chapters into a single volume. This is an optional thing to once an entire volume is released. 
+
+To use :
+1. Create a new folder in the __Incomplete Volumes__ folder with the name you want to give to the volume. ```ex: Demon Slayer - Kimetsu no Yaiba - Vol10```
+2. Put each chapter _(found in the stitches folder)_ into its appropriate volume folder.
+3. Repeat for all volumes you wish to create.
+4. Run ```volume_merger.py```
+5. Find merged volumes in __Completed Volumes__ folder.
 
 
+# Roadmap/TODO :
+
+* [ ] Automatically stitch files in temp folder after download.
+    [ ] Clean up temp directory on success.
+
+* [ ] Add metadata to PDFs.
+* [ ] Add ability to save stitched files/volumes as CBZ files instead of PDF.
+* [ ] Investigate issue in notes from 1s0n.
 
 
 ## NOTES FROM 1s0n:

@@ -1,5 +1,3 @@
-import sys
-import subprocess
 
 def main():
   # TODO: USE JS FUNCTION hozNextImage() to move pages, instead of using selenium to push buttons

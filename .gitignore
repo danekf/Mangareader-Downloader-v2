@@ -1,7 +1,10 @@
 __pycache__/
 *.png
 temp/*
+stitches/*
 downloads/*
+Incomplete Volumes/*
+Completed Volumes/*
 .vscode
 
 notes.txt

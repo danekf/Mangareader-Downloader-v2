@@ -4,8 +4,11 @@ import time
 
 mangas = os.listdir("temp")
 
-if not os.path.exists("downloads"):
-    os.mkdir("downloads")
+if not os.path.exists("stitches"):
+    os.mkdir("stitches")
+
+if not os.path.exists("Incomplete Volumes"):
+    os.mkdir("stitches")
 
 for manga in mangas:
 
@@ -30,7 +33,7 @@ for manga in mangas:
         images.append(Image.open(f"temp/{manga}/{i}.png"))
 
 
-    pdf_path = f"downloads/{manga}.pdf"
+    pdf_path = f"stitches/{manga}.pdf"
 
     print("Saving to pdf    ")
     images[0].save(
